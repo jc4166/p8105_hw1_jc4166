@@ -91,6 +91,7 @@ problem2_df = tibble(
 Scatter plot adding color using logical variable:
 ```{r yx_scatter1}
 ggplot(problem2_df, aes(x = x, y = y, color = sum_xy1)) + geom_point()
+ggsave("scatter_plot.pdf", height = 4, width = 6)
 ```
 
 Scatter plot adding color using numeric variable:
@@ -102,3 +103,5 @@ Scatter plot adding color using factor variable:
 ```{r yx_scatter3}
 ggplot(problem2_df, aes(x = x, y = y, color = sum_xy1_factor)) + geom_point()
 ```
+
+The color scales of the above scatter plots indicate the type of variables included. The numeric variable is represented by a gradient color scale for continuous data, whereas the factor and logical variables are two individual colors representing categorical data.
